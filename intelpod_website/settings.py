@@ -121,9 +121,21 @@ STORAGES = {
 # Disable manifest static files strict mode for easier debugging
 WHITENOISE_MANIFEST_STRICT = False
 
+# Allow WhiteNoise to serve all file types including images
+WHITENOISE_MIMETYPES = {
+    '.jpg': 'image/jpeg',
+    '.jpeg': 'image/jpeg',
+    '.png': 'image/png',
+    '.gif': 'image/gif',
+    '.webp': 'image/webp',
+}
+
 # Media files
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+# Add media directory to WhiteNoise for serving in production
+WHITENOISE_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
