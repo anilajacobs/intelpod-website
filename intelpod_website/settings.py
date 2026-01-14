@@ -131,14 +131,14 @@ WHITENOISE_MIMETYPES = {
 }
 
 # Media files
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
-
-# In production, media files are copied to staticfiles and served by WhiteNoise
-# This ensures persistent media file serving on Render.com
-if not DEBUG:
-    # Media files will be served from /staticfiles/media/ via WhiteNoise
-    pass
+# In production, serve media files through static URL for WhiteNoise compatibility
+if DEBUG:
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = BASE_DIR / 'media'
+else:
+    # Production: Media files are served via /static/media/ by WhiteNoise
+    MEDIA_URL = '/static/media/'
+    MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

@@ -15,11 +15,15 @@ pip install -r requirements.txt
 echo "📁 Collecting static files..."
 python manage.py collectstatic --no-input
 
-# Create symbolic link for media files in staticfiles
-echo "🖼️  Linking media files to staticfiles..."
-mkdir -p staticfiles
-ln -sfn "$(pwd)/media" staticfiles/media
-echo "✓ Media files linked"
+# Copy media files into staticfiles directory for WhiteNoise
+echo "🖼️  Copying media files to staticfiles..."
+if [ -d "media" ]; then
+    cp -r media staticfiles/
+    echo "✓ Media files copied to staticfiles/media/"
+    echo "   Files: $(find staticfiles/media -type f | wc -l)"
+else
+    echo "⚠️  Warning: media directory not found"
+fi
 
 # Run database migrations
 echo "🗄️  Running database migrations..."
