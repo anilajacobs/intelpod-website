@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Blog - Wellness Insights | Intelpod{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12 text-center text-white" data-aos="fade-down">
+                <h1 class="display-3 fw-bold mb-3">Wellness Blog</h1>
+                <p class="lead">Discover the science and benefits of steam therapy</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Posts Section -->
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="row g-4">
+            {% for post in blog_posts %}
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm product-card">
+                    {% if post.featured_image %}
+                    <img src="{{ post.featured_image.url }}" class="card-img-top" alt="{{ post.title }}" style="height: 250px; object-fit: cover;">
+                    {% else %}
+                    <div class="card-img-top bg-primary d-flex align-items-center justify-content-center" style="height: 250px;">
+                        <i class="fas fa-blog fa-4x text-white"></i>
+                    </div>
+                    {% endif %}
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <small class="text-muted"><i class="far fa-calendar me-1"></i>{{ post.published_date|date:"M d, Y" }}</small>
+                            {% if post.author %}
+                            <small class="text-muted"><i class="far fa-user me-1"></i>{{ post.author.get_full_name|default:post.author.username }}</small>
+                            {% endif %}
+                        </div>
+                        <h5 class="card-title">{{ post.title }}</h5>
+                        <p class="card-text text-muted">{{ post.excerpt|truncatewords:20 }}</p>
+                        <a href="{% url 'blog_detail' post.slug %}" class="btn btn-outline-primary">
+                            Read More <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12 text-center py-5">
+                <i class="fas fa-blog fa-4x text-muted mb-3"></i>
+                <h3 class="text-muted">No blog posts yet</h3>
+                <p class="text-muted">Check back soon for wellness insights and tips!</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

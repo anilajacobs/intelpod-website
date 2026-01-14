@@ -1,0 +1,212 @@
+[
+{
+  "model": "products.benefit",
+  "pk": 1,
+  "fields": {
+    "title": "Detoxification",
+    "description": "Removes toxins from your body through natural sweating process",
+    "icon": "fas fa-droplet",
+    "order": 1,
+    "active": true
+  }
+},
+{
+  "model": "products.benefit",
+  "pk": 2,
+  "fields": {
+    "title": "Stress Relief",
+    "description": "Reduces stress and promotes relaxation for mental wellness",
+    "icon": "fas fa-heart",
+    "order": 2,
+    "active": true
+  }
+},
+{
+  "model": "products.benefit",
+  "pk": 3,
+  "fields": {
+    "title": "Respiratory Health",
+    "description": "Improves respiratory function and clears airways",
+    "icon": "fas fa-lungs",
+    "order": 3,
+    "active": true
+  }
+},
+{
+  "model": "products.benefit",
+  "pk": 4,
+  "fields": {
+    "title": "Skin Rejuvenation",
+    "description": "Enhances skin health and promotes natural glow",
+    "icon": "fas fa-spa",
+    "order": 4,
+    "active": true
+  }
+},
+{
+  "model": "products.benefit",
+  "pk": 5,
+  "fields": {
+    "title": "Weight Management",
+    "description": "Aids in weight loss and improves metabolism",
+    "icon": "fas fa-weight-scale",
+    "order": 5,
+    "active": true
+  }
+},
+{
+  "model": "products.benefit",
+  "pk": 6,
+  "fields": {
+    "title": "Pain Relief",
+    "description": "Alleviates muscle and joint pain naturally",
+    "icon": "fas fa-hand-holding-medical",
+    "order": 6,
+    "active": true
+  }
+},
+{
+  "model": "products.testimonial",
+  "pk": 1,
+  "fields": {
+    "name": "Dr. Priya Sharma",
+    "role": "Ayurvedic Practitioner",
+    "company": "Wellness Center, Mumbai",
+    "content": "The SvedaPod Classic has been a game-changer for our wellness center. Our clients love the authentic steam therapy experience, and the build quality is exceptional. Highly recommended for any professional setting.",
+    "rating": 5,
+    "image": "",
+    "active": true,
+    "created_at": "2026-01-14T16:01:38.369Z"
+  }
+},
+{
+  "model": "products.testimonial",
+  "pk": 2,
+  "fields": {
+    "name": "Rajesh Kumar",
+    "role": "Fitness Enthusiast",
+    "company": "",
+    "content": "I installed the SvedaPod in my home gym 6 months ago, and it has become an essential part of my daily routine. The stress relief and detoxification benefits are incredible. Worth every penny!",
+    "rating": 5,
+    "image": "",
+    "active": true,
+    "created_at": "2026-01-14T16:01:38.369Z"
+  }
+},
+{
+  "model": "products.testimonial",
+  "pk": 3,
+  "fields": {
+    "name": "Anita Desai",
+    "role": "Spa Owner",
+    "company": "Serenity Spa, Delhi",
+    "content": "We purchased three units for our spa, and they have been performing flawlessly. The clients appreciate the comfort and effectiveness. Great product from an Indian company!",
+    "rating": 5,
+    "image": "",
+    "active": true,
+    "created_at": "2026-01-14T16:01:38.369Z"
+  }
+},
+{
+  "model": "products.testimonial",
+  "pk": 4,
+  "fields": {
+    "name": "Vikram Singh",
+    "role": "Yoga Instructor",
+    "company": "",
+    "content": "As a yoga instructor, I understand the importance of holistic wellness. The SvedaPod Classic perfectly complements our yoga sessions. My students love using it after practice.",
+    "rating": 5,
+    "image": "",
+    "active": true,
+    "created_at": "2026-01-14T16:01:38.370Z"
+  }
+},
+{
+  "model": "products.testimonial",
+  "pk": 5,
+  "fields": {
+    "name": "Meera Patel",
+    "role": "Health & Wellness Consultant",
+    "company": "",
+    "content": "I recommend SvedaPod to all my clients looking for home wellness solutions. The Ayurvedic steam therapy has helped many with respiratory issues, stress, and overall wellbeing. The product is well-made and delivers consistent results.",
+    "rating": 5,
+    "image": "",
+    "active": true,
+    "created_at": "2026-01-14T16:07:11.541Z"
+  }
+},
+{
+  "model": "products.testimonial",
+  "pk": 6,
+  "fields": {
+    "name": "Dr. Arjun Reddy",
+    "role": "Physiotherapist",
+    "company": "Recovery Clinic, Chennai",
+    "content": "We use SvedaPod in our physiotherapy clinic for pain management and recovery. Patients report significant improvement in muscle relaxation and pain relief. The steam therapy complements our treatment protocols perfectly.",
+    "rating": 5,
+    "image": "",
+    "active": true,
+    "created_at": "2026-01-14T16:07:11.542Z"
+  }
+},
+{
+  "model": "products.teammember",
+  "pk": 5,
+  "fields": {
+    "name": "Palakeezhil Azeezkunju Noushad",
+    "role": "founder",
+    "title": "Founder",
+    "bio": "Over 35 years of experience in interior and product design. He combines design expertise with innovative wellness solutions, emphasizing that comfort and well-being are at the core of every creation. Passionate about architectural trends and creative pursuits.",
+    "photo": "team/noushad.png",
+    "email": "noushad@intelpod.in",
+    "linkedin_url": "",
+    "order": 1,
+    "active": true
+  }
+},
+{
+  "model": "products.teammember",
+  "pk": 6,
+  "fields": {
+    "name": "Paakkaran",
+    "role": "ceo",
+    "title": "Co-Founder, CEO",
+    "bio": "Leads organizational strategy, operations, and growth. Brings over a decade of marketing and sales expertise in branding, market expansion, and customer engagement. Passionate about traveling and exploring different markets to better serve our customers.",
+    "photo": "team/musthafa.png",
+    "email": "musthafa@intelpod.in",
+    "linkedin_url": "https://www.linkedin.com/in/muhammed-m-92a2b31b7/",
+    "order": 2,
+    "active": true
+  }
+},
+{
+  "model": "products.teammember",
+  "pk": 7,
+  "fields": {
+    "name": "Dr. Renjith Purushothaman",
+    "role": "cto",
+    "title": "Director, CTO",
+    "bio": "4th-generation Ayurveda doctor integrating ancient wellness practices with cutting-edge advancements. His deep Ayurvedic knowledge shapes our product offerings and ensures authenticity. Dedicated to natural healing and sustainable living.",
+    "photo": "team/renjith.png",
+    "email": "renjith@intelpod.in",
+    "linkedin_url": "",
+    "order": 3,
+    "active": true
+  }
+},
+{
+  "model": "products.teammember",
+  "pk": 8,
+  "fields": {
+    "name": "Abraham Antony",
+    "role": "CCO",
+    "title": "Director, Chief Commercial Officer (CCO)",
+    "bio": "Oversees commercial strategy, sales growth, and digital marketing. Brings over a decade of experience in branding, market expansion, and building trusted customer relationships. Drives our mission to make wellness accessible to everyone.",
+    "photo": "team/abraham.jpg",
+    "email": "abraham@intelpod.in",
+    "linkedin_url": "https://www.linkedin.com/in/abrahamantony96",
+    "order": 4,
+    "active": true
+  }
+}
+]

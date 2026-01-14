@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ blog_post.meta_title|default:blog_post.title }} | Intelpod Blog{% endblock %}
+{% block meta_description %}{{ blog_post.meta_description|default:blog_post.excerpt }}{% endblock %}
+
+{% block content %}
+<!-- Blog Post Hero -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{% url 'blog_list' %}">Blog</a></li>
+                        <li class="breadcrumb-item active">{{ blog_post.title }}</li>
+                    </ol>
+                </nav>
+                <h1 class="display-4 fw-bold mb-3">{{ blog_post.title }}</h1>
+                <div class="d-flex gap-3 text-muted mb-4">
+                    <span><i class="far fa-calendar me-2"></i>{{ blog_post.published_date|date:"F d, Y" }}</span>
+                    {% if blog_post.author %}
+                    <span><i class="far fa-user me-2"></i>{{ blog_post.author.get_full_name|default:blog_post.author.username }}</span>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Content -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                {% if blog_post.featured_image %}
+                <img src="{{ blog_post.featured_image.url }}" class="img-fluid rounded shadow-sm mb-4" alt="{{ blog_post.title }}">
+                {% endif %}
+
+                <div class="blog-content">
+                    {{ blog_post.content|linebreaks }}
+                </div>
+
+                <!-- Share Section -->
+                <div class="mt-5 pt-4 border-top">
+                    <h5 class="mb-3">Share this article</h5>
+                    <div class="d-flex gap-2">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" class="btn btn-outline-primary">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
+                        <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ blog_post.title }}" target="_blank" class="btn btn-outline-info">
+                            <i class="fab fa-twitter"></i> Twitter
+                        </a>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}&title={{ blog_post.title }}" target="_blank" class="btn btn-outline-primary">
+                            <i class="fab fa-linkedin-in"></i> LinkedIn
+                        </a>
+                        <a href="https://wa.me/?text={{ blog_post.title }} {{ request.build_absolute_uri }}" target="_blank" class="btn btn-outline-success">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Related Posts -->
+{% if related_posts %}
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Related Articles</h2>
+        <div class="row g-4">
+            {% for post in related_posts %}
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    {% if post.featured_image %}
+                    <img src="{{ post.featured_image.url }}" class="card-img-top" alt="{{ post.title }}" style="height: 200px; object-fit: cover;">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ post.title|truncatewords:10 }}</h5>
+                        <p class="card-text text-muted small">{{ post.excerpt|truncatewords:15 }}</p>
+                        <a href="{% url 'blog_detail' post.slug %}" class="btn btn-sm btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+{% endblock %}

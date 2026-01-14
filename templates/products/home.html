@@ -1,0 +1,397 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+<!-- Hero Section - White Background with Animated Elements -->
+<section class="hero-section-white bg-white position-relative" style="overflow: hidden;">
+    <!-- Animated Background Elements -->
+    <div class="hero-background-animation">
+        <!-- Floating Circles -->
+        <div class="floating-shape circle-1"></div>
+        <div class="floating-shape circle-2"></div>
+        <div class="floating-shape circle-3"></div>
+        <div class="floating-shape circle-4"></div>
+        <div class="floating-shape circle-5"></div>
+
+        <!-- Floating Squares -->
+        <div class="floating-shape square-1"></div>
+        <div class="floating-shape square-2"></div>
+
+        <!-- Floating Lines -->
+        <div class="floating-line line-1"></div>
+        <div class="floating-line line-2"></div>
+        <div class="floating-line line-3"></div>
+    </div>
+
+    <div class="container py-5 position-relative" style="z-index: 10;">
+        <div class="row align-items-center min-vh-75">
+            <div class="col-lg-6" data-aos="fade-right">
+                <span class="badge bg-success mb-3 px-3 py-2">Premium Wellness Solutions</span>
+                <h1 class="display-3 fw-bold mb-4 text-dark">The Future of <span class="text-primary">Wellness</span></h1>
+                <p class="lead mb-4 text-muted">Experience the perfect blend of ancient Ayurveda and modern technology with our premium steam bath cabinets.</p>
+                <div class="d-flex gap-3 flex-wrap">
+                    <a href="{% url 'product_list' %}" class="btn btn-primary btn-lg px-4 py-3">
+                        <i class="fas fa-shopping-bag me-2"></i>Shop Now
+                    </a>
+                    <a href="{% url 'contact' %}" class="btn btn-outline-primary btn-lg px-4 py-3">
+                        <i class="fas fa-phone me-2"></i>Contact Us
+                    </a>
+                </div>
+                <!-- Trust Badges -->
+                <div class="mt-4 d-flex gap-3 align-items-center flex-wrap">
+                    <small class="text-muted"><i class="fas fa-check-circle text-success me-1"></i> Made in India</small>
+                    <small class="text-muted"><i class="fas fa-check-circle text-success me-1"></i> ISO Certified</small>
+                    <small class="text-muted"><i class="fas fa-check-circle text-success me-1"></i> 500+ Happy Customers</small>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="hero-image-wrapper position-relative">
+                    <!-- Enhanced Green Circle with Layers -->
+                    <div class="green-circle-bg"></div>
+
+                    <!-- Additional Floating Particles -->
+                    <div class="hero-particle particle-1"></div>
+                    <div class="hero-particle particle-2"></div>
+                    <div class="hero-particle particle-3"></div>
+                    <div class="hero-particle particle-4"></div>
+
+                    <img src="{% static 'images/hero-product.png' %}" alt="SvedaPod Classic" class="img-fluid position-relative" style="z-index: 5;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certifications Section - Light Green Background -->
+<section class="py-4" style="background: linear-gradient(135deg, #f0f9f4 0%, #e8f5e9 100%);">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-3 text-center mb-3 mb-md-0">
+                <p class="fw-bold text-success mb-0"><i class="fas fa-award me-2"></i>Trusted & Certified</p>
+            </div>
+            <div class="col-md-9">
+                <div class="row g-3 align-items-center justify-content-center">
+                    <div class="col-6 col-md-3 text-center">
+                        <img src="{% static 'images/gem-certificate.png' %}" alt="GeM Certificate" class="img-fluid" style="max-height: 60px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));" title="GeM Certified">
+                        <p class="small text-muted mt-2 mb-0">GeM Certified</p>
+                    </div>
+                    <div class="col-6 col-md-3 text-center">
+                        <img src="{% static 'images/startup-india.png' %}" alt="Startup India" class="img-fluid" style="max-height: 60px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));" title="Startup India">
+                        <p class="small text-muted mt-2 mb-0">Startup India</p>
+                    </div>
+                    <div class="col-6 col-md-3 text-center">
+                        <img src="{% static 'images/make-in-india.png' %}" alt="Make in India" class="img-fluid" style="max-height: 60px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));" title="Make in India">
+                        <p class="small text-muted mt-2 mb-0">Make in India</p>
+                    </div>
+                    <div class="col-6 col-md-3 text-center">
+                        <div class="d-flex flex-column align-items-center">
+                            <div class="bg-white rounded-circle p-3 shadow-sm" style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+                                <span class="fw-bold text-success" style="font-size: 1.5rem;">2Y</span>
+                            </div>
+                            <p class="small text-muted mt-2 mb-0">Warranty</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section - White Background with Subtle Pattern -->
+<section class="py-5 bg-white position-relative" style="overflow: hidden;">
+    <!-- Decorative Background Elements -->
+    <div style="position: absolute; top: 20%; right: -5%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(0,75,39,0.03) 0%, transparent 70%); border-radius: 50%; z-index: 0;"></div>
+    <div style="position: absolute; bottom: 10%; left: -5%; width: 250px; height: 250px; background: radial-gradient(circle, rgba(40,167,69,0.03) 0%, transparent 70%); border-radius: 50%; z-index: 0;"></div>
+
+    <div class="container position-relative" style="z-index: 1;">
+        <div class="text-center mb-5">
+            <span class="badge bg-success mb-2 px-3 py-2">Why Choose Us</span>
+            <h2 class="display-5 fw-bold">Why Choose Intelpod?</h2>
+            <p class="lead text-muted">Excellence in every aspect</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="card border-0 shadow-sm h-100 text-center p-4">
+                    <div class="card-body">
+                        <div class="feature-icon bg-primary text-white rounded-circle mx-auto mb-3">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h5 class="card-title">Premium Quality</h5>
+                        <p class="card-text text-muted">Made with high-grade FRP materials for durability and hygiene</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card border-0 shadow-sm h-100 text-center p-4">
+                    <div class="card-body">
+                        <div class="feature-icon bg-success text-white rounded-circle mx-auto mb-3">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h5 class="card-title">Ayurvedic Design</h5>
+                        <p class="card-text text-muted">Inspired by ancient wellness practices for holistic health</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card border-0 shadow-sm h-100 text-center p-4">
+                    <div class="card-body">
+                        <div class="feature-icon bg-info text-white rounded-circle mx-auto mb-3">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h5 class="card-title">Advanced Technology</h5>
+                        <p class="card-text text-muted">Cutting-edge steam generation and control systems</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card border-0 shadow-sm h-100 text-center p-4">
+                    <div class="card-body">
+                        <div class="feature-icon bg-warning text-white rounded-circle mx-auto mb-3">
+                            <i class="fas fa-flag-india"></i>
+                        </div>
+                        <h5 class="card-title">Made in India</h5>
+                        <p class="card-text text-muted">Proudly manufactured in India, supporting local economy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Products Section - Light Green Background -->
+<section class="py-5" style="background: linear-gradient(to bottom, #f0f9f4 0%, #ffffff 100%);">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="badge bg-success mb-2">Our Collection</span>
+            <h2 class="display-5 fw-bold text-dark">Our Products</h2>
+            <p class="lead text-muted">Premium steam bath solutions for every need</p>
+        </div>
+        <div class="row g-4">
+            {% for product in products %}
+            <div class="col-md-6 col-lg-3">
+                <div class="card product-card-new h-100 border-0 shadow-sm">
+                    <!-- Image Container with Fixed Aspect Ratio -->
+                    <div class="product-image-container position-relative">
+                        {% if product.image %}
+                        <img src="{{ product.image.url }}" class="product-image" alt="{{ product.name }}">
+                        {% else %}
+                        <img src="{% static 'images/placeholder.jpg' %}" class="product-image" alt="{{ product.name }}">
+                        {% endif %}
+
+                        <!-- Discount Badge -->
+                        {% if product.get_discount_percentage > 0 %}
+                        <div class="discount-badge">
+                            <span class="discount-text">{{ product.get_discount_percentage }}%</span>
+                            <span class="discount-label">OFF</span>
+                        </div>
+                        {% endif %}
+
+                        <!-- Stock Badge -->
+                        {% if product.stock <= 5 and product.stock > 0 %}
+                        <div class="stock-badge bg-warning">
+                            <i class="fas fa-exclamation-circle me-1"></i>Only {{ product.stock }} left!
+                        </div>
+                        {% elif product.stock > 0 %}
+                        <div class="stock-badge bg-success">
+                            <i class="fas fa-check-circle me-1"></i>In Stock
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="card-body d-flex flex-column p-4">
+                        <h5 class="card-title mb-2 fw-bold text-dark">{{ product.name }}</h5>
+                        <p class="card-text text-muted small mb-3 flex-grow-1" style="line-height: 1.5; min-height: 60px; max-height: 60px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">
+                            {{ product.short_description|truncatewords:15 }}
+                        </p>
+
+                        <!-- Price Section -->
+                        <div class="price-section mb-3">
+                            <div class="d-flex align-items-baseline gap-2 mb-2">
+                                <span class="h4 text-primary fw-bold mb-0">₹{{ product.price|floatformat:0|intcomma }}</span>
+                                {% if product.original_price %}
+                                <span class="text-muted text-decoration-line-through small">₹{{ product.original_price|floatformat:0|intcomma }}</span>
+                                {% endif %}
+                            </div>
+                            {% if product.get_discount_percentage > 0 %}
+                            <p class="text-success small mb-0">
+                                <i class="fas fa-tag me-1"></i>Save ₹{{ product.original_price|add:"-"|add:product.price|floatformat:0 }}
+                            </p>
+                            {% endif %}
+                        </div>
+
+                        <!-- Action Button -->
+                        <a href="{% url 'product_detail' product.slug %}" class="btn btn-primary btn-sm w-100 py-2">
+                            <i class="fas fa-eye me-2"></i>View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="text-center mt-5">
+            <a href="{% url 'product_list' %}" class="btn btn-outline-primary btn-lg">
+                View All Products <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Statistics Section - Green Background -->
+<section class="py-5" style="background: linear-gradient(135deg, #004b27 0%, #006633 100%);">
+    <div class="container">
+        <div class="row g-4 text-center text-white">
+            <div class="col-md-3">
+                <div class="p-3">
+                    <i class="fas fa-users fa-3x mb-3 opacity-75"></i>
+                    <h2 class="display-4 fw-bold mb-0">500+</h2>
+                    <p class="lead mb-0">Happy Customers</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-3">
+                    <i class="fas fa-star fa-3x mb-3 opacity-75"></i>
+                    <h2 class="display-4 fw-bold mb-0">4.8</h2>
+                    <p class="lead mb-0">Average Rating</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-3">
+                    <i class="fas fa-award fa-3x mb-3 opacity-75"></i>
+                    <h2 class="display-4 fw-bold mb-0">2Y</h2>
+                    <p class="lead mb-0">Warranty</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-3">
+                    <i class="fas fa-shipping-fast fa-3x mb-3 opacity-75"></i>
+                    <h2 class="display-4 fw-bold mb-0">Free</h2>
+                    <p class="lead mb-0">Delivery</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Health Benefits Section - White Background with Pattern -->
+{% if benefits %}
+<section class="py-5 bg-white position-relative" style="background-image: linear-gradient(120deg, #f0f9f4 0%, #ffffff 100%); overflow: hidden;">
+    <!-- Decorative Elements -->
+    <div style="position: absolute; top: 50%; left: 5%; width: 200px; height: 200px; background: radial-gradient(circle, rgba(40,167,69,0.05) 0%, transparent 70%); border-radius: 50%; z-index: 0;"></div>
+    <div style="position: absolute; bottom: 20%; right: 10%; width: 180px; height: 180px; background: radial-gradient(circle, rgba(0,75,39,0.05) 0%, transparent 70%); border-radius: 50%; z-index: 0;"></div>
+
+    <div class="container position-relative" style="z-index: 1;">
+        <div class="text-center mb-5">
+            <span class="badge bg-success mb-2 px-3 py-2">Wellness Advantages</span>
+            <h2 class="display-5 fw-bold text-dark">Health Benefits</h2>
+            <p class="lead text-muted">Experience transformative wellness with regular steam therapy</p>
+        </div>
+        <div class="row g-4">
+            {% for benefit in benefits %}
+            <div class="col-md-6 col-lg-4">
+                <div class="d-flex align-items-start">
+                    <div class="benefit-icon bg-primary text-white rounded-circle me-3 flex-shrink-0">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-2">{{ benefit.title }}</h5>
+                        <p class="text-muted mb-0">{{ benefit.description }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Testimonials Section - Light Green Background -->
+{% if testimonials %}
+<section class="py-5" style="background: linear-gradient(to bottom, #ffffff 0%, #f0f9f4 100%);">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="badge bg-success mb-2">Customer Reviews</span>
+            <h2 class="display-5 fw-bold text-dark">What Our Customers Say</h2>
+            <p class="lead text-muted">Real experiences from real people</p>
+        </div>
+        <div class="row g-4">
+            {% for testimonial in testimonials %}
+            <div class="col-md-6 col-lg-4">
+                <div class="card testimonial-card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            {% for i in "12345" %}
+                                {% if forloop.counter <= testimonial.rating %}
+                                <i class="fas fa-star text-warning"></i>
+                                {% else %}
+                                <i class="far fa-star text-warning"></i>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <p class="card-text">"{{ testimonial.content }}"</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <div class="d-flex align-items-center">
+                            {% if testimonial.image %}
+                            <img src="{{ testimonial.image.url }}" alt="{{ testimonial.name }}" class="rounded-circle me-3" width="50" height="50">
+                            {% else %}
+                            <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                <span class="fw-bold">{{ testimonial.name|first }}</span>
+                            </div>
+                            {% endif %}
+                            <div>
+                                <h6 class="mb-0">{{ testimonial.name }}</h6>
+                                <small class="text-muted">{{ testimonial.role }}{% if testimonial.company %}, {{ testimonial.company }}{% endif %}</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- CTA Section - Green with White Card -->
+<section class="py-5" style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%); position: relative; overflow: hidden;">
+    <!-- Decorative Elements -->
+    <div style="position: absolute; top: -50px; right: -50px; width: 300px; height: 300px; background: rgba(255,255,255,0.1); border-radius: 50%;"></div>
+    <div style="position: absolute; bottom: -100px; left: -100px; width: 400px; height: 400px; background: rgba(255,255,255,0.05); border-radius: 50%;"></div>
+
+    <div class="container position-relative">
+        <div class="card border-0 shadow-lg p-5" style="background: white;">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <span class="badge bg-success mb-3">Special Offer</span>
+                    <h2 class="display-5 fw-bold mb-3 text-dark">Ready to Transform Your <span class="text-primary">Wellness Journey?</span></h2>
+                    <p class="lead text-muted mb-4">Order your SvedaPod today and experience the future of wellness at home. Limited time offer with up to 17% discount!</p>
+                    <div class="d-flex gap-3 align-items-center flex-wrap">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-shipping-fast text-success fs-4 me-2"></i>
+                            <span class="text-muted">Free Delivery</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-shield-alt text-success fs-4 me-2"></i>
+                            <span class="text-muted">Warranty Included</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-headset text-success fs-4 me-2"></i>
+                            <span class="text-muted">24/7 Support</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="{% url 'product_list' %}" class="btn btn-primary btn-lg w-100 mb-3 py-3">
+                        <i class="fas fa-shopping-cart me-2"></i>Shop Now
+                    </a>
+                    <a href="{% url 'contact' %}" class="btn btn-outline-primary btn-lg w-100 py-3">
+                        <i class="fas fa-phone me-2"></i>Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
