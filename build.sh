@@ -15,11 +15,11 @@ pip install -r requirements.txt
 echo "📁 Collecting static files..."
 python manage.py collectstatic --no-input
 
-# Copy media files to staticfiles for WhiteNoise serving
-echo "🖼️  Copying media files to staticfiles..."
-mkdir -p staticfiles/media
-cp -r media/* staticfiles/media/ 2>/dev/null || true
-echo "✓ Media files copied"
+# Create symbolic link for media files in staticfiles
+echo "🖼️  Linking media files to staticfiles..."
+mkdir -p staticfiles
+ln -sfn "$(pwd)/media" staticfiles/media
+echo "✓ Media files linked"
 
 # Run database migrations
 echo "🗄️  Running database migrations..."
